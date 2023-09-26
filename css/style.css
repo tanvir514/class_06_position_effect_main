@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap");
+
+/* font link always on top of css file,
+import click kore "style" tag chara baki tuku nite hobe */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+.flex {
+  display: flex;
+}
+.wrap {
+  flex-wrap: wrap;
+}
+.align-center {
+  align-items: center;
+}
+.justify-center {
+  justify-content: center;
+}
+.gap-10 {
+  gap: 10px;
+}
+/* ========== Header Section Start ========== */
+
+header {
+  background-color: #fafafa;
+  border: 2px solid #00514a1a;
+}
+.container {
+  max-width: 900px;
+  margin: auto;
+}
+.logo {
+  max-width: 20%;
+  flex-basis: 20%;
+}
+/* .logo a img {
+  max-width: 150px;
+} */
+nav {
+  max-width: 80%;
+  /* width: 100%; */
+  flex-basis: 80%;
+
+  /* width er bodole flex-basis use kora jay,
+  80% width puratai jate pay tai extra vabe flex-basis use kora,
+  max-width & flex-basis duitai barle width barbe, 
+  jekono ekta barle width barbe na, max-width na diyeo only flex-basis deya jay 
+  flex korle tokhon flex-basis use korte hoy*/
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  gap: 5px;
+}
+nav ul li a {
+  color: #00514a;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 9px 8px;
+  display: block;
+  transition-duration: 0.4s;
+
+  /* anchor tag block element noy,
+  tai padding debar pore display: block kore deya hoise,
+  ete kore valo vabe kaj korbe */
+}
+
+nav ul li a:hover {
+  background-color: #00514a;
+  color: #fff;
+  /* transition-duration: 0.4s; */
+
+  /* Hover transition duration jodi only :hover e deya hoy,
+  taile menu theke mouse sorale effect hobe na, only mouse rakhle effect hobe,
+  tai main "a" tag e transition-duration deya hoise, jate mouse rakhle & sorale
+  both time transition - duration ta hoy*/
+}
+
+/* ========== Hero Banner Section ========== */
+
+.hero-banner-section {
+  /* background: red; */
+  /* background-color: green; */ /* background & background-color dile 2nd ta, nicher ta active hobe */
+
+  background: #373737 url(../images/hero-banner-1.png);
+  min-height: 600px;
+  background-repeat: no-repeat;
+  background-position-y: bottom;
+  background-size: cover;
+  background-blend-mode: overlay;
+  background-attachment: fixed;
+
+  /* ".." double dot diye ekbar directory te back gesi */
+  /* background-position-y: diye bg-image upore niche y axis crop hoye gele,
+  upore nihce up down adjust kore jay */
+  /* background-size: cover dile image full width e ase, contain dile full asbe na */
+  /* last step e, min-height: adjust korte hobe jate image thik middle e ase, dekhte valo lage */
+  /* background-color: dark nile blend mode valo hoy, blend mode diye different shade kora jay,
+  color depend kore image + bg color er combination er upore */
+  /* background-attachment: fixed kore dile background image ta fixed thakbe background e */
+}
+
+/* .hero-content {
+} */
+.hero-content h1 {
+  font-size: 70px;
+  color: #fff;
+  line-height: 75px;
+  font-weight: 900;
+  text-align: center;
+}
+.hero-content p {
+  color: #fff;
+  font-size: 18px;
+  margin-top: 15px;
+  text-align: center;
+}
+
+/* ========== Gallery Section ========== */
+
+.gallery-section {
+  padding: 50px 0;
+}
+.gallery-image {
+  flex-basis: 33.33%;
+  padding: 8px;
+}
+.gallery-image img {
+  /* height: 100%; */
+  width: 100%;
+  /* aspect-ratio: 1; */
+  aspect-ratio: 6/7;
+  object-fit: cover;
+
+  display: block;
+  border-radius: 12px;
+
+  /***** [image fitting uporer 3ta diye kora jay, abar nicher 3ta diyeo kora jay] *****/
+
+  /* height: 350px;
+  object-fit: cover;
+  object-position: right; */
+
+  /* object fit: cover dile sob img ratio thik thake,  */
+  /* object position: er onek gula option ase, jeta valo fit hoy, */
+
+  /***** display: block --> by default image er bottom e ekta space pay,
+  eta remove korte display: block korte hoy *****/
+}
+
+/* ====== Transform & Effect Section ====== */
+
+.col_1_2 {
+  flex-basis: 50%;
+  padding: 15px;
+}
+.hover-image img {
+  display: block;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+.hover-image {
+  background-color: red;
+}
